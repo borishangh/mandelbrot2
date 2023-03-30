@@ -3,7 +3,9 @@ const ctx = canvas.getContext('2d');
 
 const maxIter = 250;
 
-const size = 600;
+console.log(window.innerWidth);
+
+const size = window.innerWidth < 720 ? window.innerWidth * 0.8 : 600;
 let zoom = size / 2;
 let center = [-0.75, 0];
 
@@ -63,7 +65,7 @@ canvas.addEventListener('click', function (event) {
   center = [(clickedX - canvas.width / 2) / zoom + center[0], (clickedY - canvas.height / 2) / zoom + center[1]];
   zoom *= document.getElementById('zoom-in').checked ? 4 : 0.25;
   let data = drawMandelbrot(zoom, center);
-  console.log(data);
+  // console.log(data);
 });
 
 // canvas.addEventListener('contextmenu', function (event) {
