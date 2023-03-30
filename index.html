@@ -13,6 +13,7 @@
 
         body {
             display: block;
+            font-family: sans-serif;
             max-width: 600px;
             margin: auto;
             text-align: center;
@@ -29,12 +30,13 @@
     <h3>Mandelbrot <a href="https://en.wikipedia.org/wiki/Mandelbrot_set" target="_blank">[link]</a></h3>
     <canvas id="canvas" height="500" width="500"></canvas>
     <script src="app.js"></script>
-    <p>[ click on image to zoom ] &rarr;
-    <input type="radio" name="zoom" id="zoom-out" value="zoom-out" >
-    <label for="zoom-out">zoom out</label>
-    <input type="radio" name="zoom" id="zoom-in" value="zoom-in" checked>
-    <label for="zoom-in">zoom in</label> 
+    <p>
+        <input type="radio" name="zoom" id="zoom-out" value="zoom-out">
+        <label for="zoom-out">zoom out</label>
+        <input type="radio" name="zoom" id="zoom-in" value="zoom-in" checked>
+        <label for="zoom-in">zoom in</label><br>
+        [ click on image to zoom, or tap on screen ]
     </p>
 </body>
 
-</html> 
+</html>

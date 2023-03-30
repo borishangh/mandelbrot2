@@ -5,11 +5,12 @@ const maxIter = 250;
 
 console.log(window.innerWidth);
 
+const dpr = window.devicePixelRatio || 1;
 const size = window.innerWidth < 720 ? window.innerWidth * 0.8 : 600;
-let zoom = size / 2;
+
+let zoom = size * dpr * .4;
 let center = [-0.75, 0];
 
-const dpr = window.devicePixelRatio || 1;
 ctx.scale(dpr, dpr);
 canvas.width = size * dpr;
 canvas.height = size * dpr;
